@@ -81,8 +81,8 @@ int main()
             std::cout << "Task " << taskActiveName << " started" << std::endl << std::endl;
         }
         else
-            if (command == END)
-            {
+            if (command == END && activeTask)
+            {   
                 endTask(fileName, taskActiveName, startTime);
                 activeTask = false;
                 taskCompletedName = taskActiveName;
